@@ -21,4 +21,3 @@ const IndexPage = () => (
 
 export default IndexPage
 
-// github token: 969988997acdc2b367cdee459a4259af27f84586

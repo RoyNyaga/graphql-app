@@ -20,6 +20,7 @@
     "react-helmet": "^6.0.0"
   },
   "devDependencies": {
+    "env-cmd": "^10.1.0",
     "prettier": "2.0.5"
   },
   "keywords": [
