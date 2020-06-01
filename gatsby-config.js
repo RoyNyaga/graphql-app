@@ -43,6 +43,7 @@ module.exports = {
                     name
                     url
                     hasIssuesEnabled
+                    createdAt
                     collaborators(first: 1){
                       edges{
                         node{
