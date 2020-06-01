@@ -4,7 +4,7 @@ import navStyle from '../styles/navbar.module.css'
 const Navbar = () => {
 	return(
 		<div>
-			<h1 className="bg-danger">This is the navbar</h1>
+			<div id="nav-div" className="container-fluid text-center">Roy's Mini Github Portfolio</div>
 		</div>
 		)
 }	
