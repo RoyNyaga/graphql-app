@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
+import Layout from '../components/layout'
 
 
 const IndexPage = () => {
@@ -30,11 +31,12 @@ const IndexPage = () => {
 
   console.log(resource.allGithubData.nodes[0].rawResult.data.repositoryOwner.repositories.totalCount)
   return(
-    <div>
+    <Layout>
       {resource.allGithubData.nodes[0].rawResult.data.repositoryOwner.repositories.edges.map((edge) => {
-        return (<p key={edge.node.name}><Link to={`/repository/${edge.node.name}`}>{edge.node.name}</Link></p>)
-      }) }
-    </div>
+      return (<p key={edge.node.name}><Link to={`/repository/${edge.node.name}`}>{edge.node.name}</Link></p>)
+    }) }
+    </Layout>     
+
   )
 }
 
