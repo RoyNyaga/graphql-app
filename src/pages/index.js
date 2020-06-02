@@ -1,9 +1,11 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
+import 'bootstrap/dist/css/bootstrap.css';
 
 import '../styles/index.css'
 
 import Layout from '../components/layout'
+import GithubCard from '../components/githubCard'
 
 
 const IndexPage = () => {
@@ -18,7 +20,10 @@ const IndexPage = () => {
                   totalCount
                   edges{
                     node{
-                      name                     
+                      name
+                      url
+                      hasIssuesEnabled
+                      createdAt
                     }
                   }
                 }
@@ -32,12 +37,18 @@ const IndexPage = () => {
   `)
 
 
-  console.log(resource.allGithubData.nodes[0].rawResult.data.repositoryOwner.repositories.totalCount)
+  const numOfRepo = resource.allGithubData.nodes[0].rawResult.data.repositoryOwner.repositories.totalCount
+  const edges = resource.allGithubData.nodes[0].rawResult.data.repositoryOwner.repositories.edges
+
   return(
     <Layout>
-      {resource.allGithubData.nodes[0].rawResult.data.repositoryOwner.repositories.edges.map((edge) => {
-      return (<p key={edge.node.name}><Link to={`/repository/${edge.node.name}`}>{edge.node.name}</Link></p>)
-    }) }
+      <div className="container">
+        <div id="row-wrapper" className="row text-center pt-5">
+          {edges.map((edge) => {
+            return (<GithubCard repoName={edge.node.name}/>)
+          }) }
+        </div>
+      </div>
     </Layout>     
 
   )
@@ -45,3 +56,4 @@ const IndexPage = () => {
 
 export default IndexPage
 
+     

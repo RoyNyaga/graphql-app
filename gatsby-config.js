@@ -30,6 +30,16 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+            `Tenali Ramakrishna`,
+            `Pacifico`
+        ],
+        display: 'swap'
+      }
+    },
+    {
       resolve: `gatsby-source-github-api`,
       options: {
         token: process.env.GITHUB_API_TOKEN,
@@ -44,13 +54,6 @@ module.exports = {
                     url
                     hasIssuesEnabled
                     createdAt
-                    collaborators(first: 1){
-                      edges{
-                        node{
-                          name
-                        }
-                      }
-                    }
                   }
                 }
               } 
