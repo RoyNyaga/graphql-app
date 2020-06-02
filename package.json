@@ -16,10 +16,12 @@
     "gatsby-source-filesystem": "^2.3.4",
     "gatsby-source-github-api": "^0.2.1",
     "gatsby-transformer-sharp": "^2.5.2",
+    "moment": "^2.26.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.0.0"
+    "react-helmet": "^6.0.0",
+    "react-moment": "^0.9.7"
   },
   "devDependencies": {
     "env-cmd": "^10.1.0",
