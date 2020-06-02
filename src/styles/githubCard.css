@@ -10,5 +10,21 @@
 
 #github-show-page-row-div{
 	height: 80vh;
+}
 
+.show-page-heading{
+	font-size: 4.5em;
+}
+
+.show-page-paragraph{
+	font-size: 2em;
+}
+
+.col-md-6{
+	box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+	background: #001416b3;
+}
+
+.github-link{
+	font-size: 2em;
 }

@@ -43,6 +43,7 @@ const IndexPage = () => {
   return(
     <Layout>
       <div className="container">
+      <h1 className="text-white text-center pt-5">{numOfRepo} repositories</h1>
         <div id="row-wrapper" className="row text-center pt-5">
           {edges.map((edge) => {
             return (<GithubCard repoName={edge.node.name}/>)

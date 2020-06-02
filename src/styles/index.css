@@ -9,3 +9,7 @@ body{
 #row-wrapper{
 	background: transparent;
 }
+
+#footer-div{
+	border-top: 2px solid white;
+}
