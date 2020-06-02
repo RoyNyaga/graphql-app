@@ -13,3 +13,11 @@ body{
 #footer-div{
 	border-top: 2px solid white;
 }
+
+.page-not-found-link{
+	font-size: 3em;
+}
+
+#page-not-found{
+	height: 80vh;
+}
