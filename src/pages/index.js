@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import 'bootstrap/dist/css/bootstrap.css';
+import Head from '../components/head'
 
 import '../styles/index.css'
 
@@ -35,13 +36,14 @@ const IndexPage = () => {
     }
 
   `)
-
+ 
 
   const numOfRepo = resource.allGithubData.nodes[0].rawResult.data.repositoryOwner.repositories.totalCount
   const edges = resource.allGithubData.nodes[0].rawResult.data.repositoryOwner.repositories.edges
 
   return(
     <Layout>
+    <Head/>
       <div className="container">
       <h1 className="text-white text-center pt-5">{numOfRepo} repositories</h1>
         <div id="row-wrapper" className="row text-center pt-5">

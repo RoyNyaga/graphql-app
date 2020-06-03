@@ -43,6 +43,7 @@ module.exports = {
       resolve: `gatsby-source-github-api`,
       options: {
         token: process.env.GITHUB_API_TOKEN,
+        url: `https://api.github.com/graphql`,
         graphQLQuery: `
           query { 
             repositoryOwner(login: "RoyNyaga"){
