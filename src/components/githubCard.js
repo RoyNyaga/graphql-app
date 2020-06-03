@@ -1,6 +1,7 @@
 import React from 'react'
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { Link } from "gatsby"
 import '../styles/githubCard.css'
+import PropTypes from 'prop-types';
 
 const GithubCard = (props) => {
 	return(
@@ -10,5 +11,9 @@ const GithubCard = (props) => {
 		</div>
 		)
 }
+
+GithubCard.propTypes = {
+  repoName: PropTypes.string,
+};
 
 export default GithubCard
