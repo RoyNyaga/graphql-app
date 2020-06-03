@@ -1,3 +1,28 @@
- {resource.allGithubData.nodes[0].rawResult.data.repositoryOwner.repositories.edges.map((edge) => {
-      return (<p key={edge.node.name}><Link to={`/repository/${edge.node.name}`}>{edge.node.name}</Link></p>)
-    }) }
+# Mini Github portfolio website which consumes the Github Graphql API v4
+
+### About 
+The purpose of this project is to practice utilizing the Github Graphql API by building a Gatsby powered application.
+
+### Live Demo. 
+Click [here](https://trusting-benz-5c932a.netlify.app/) to see the live version.
+
+### Technologies used
+
+* Javascript ES6.
+* React
+* Gastby
+* Graphql
+* Netlify
+* Bootstrap4
+
+### Future Features
+
+* Adding more features such as issues, repository descriptions and more repository information.
+* Implement mutations from the website so that I should be able to delete and to update repositories and other resources from the platform.
+
+### Author
+
+:bust_in_silhouette: [Nyaga Andre Roy](https://github.com/RoyNyaga)
+* Gihub: [RoyNyaga](https://github.com/RoyNyaga)
+* Email: [nyagaandreroy@gmail.com](mailto:nyagaandreroy@gmail.com)
+* Linkedin: [Roy Nyaga](https://www.linkedin.com/in/roy-nyaga-andre/)
