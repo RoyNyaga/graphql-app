@@ -4,7 +4,9 @@ module.exports = {
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
+
   plugins: [
+
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -27,8 +29,39 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+            `Tenali Ramakrishna`,
+            `Pacifico`
+        ],
+        display: 'swap'
+      }
+    },
+    {
+      resolve: `gatsby-source-github-api`,
+      options: {
+        token: process.env.GITHUB_API_TOKEN,
+        url: `https://api.github.com/graphql`,
+        graphQLQuery: `
+          query { 
+            repositoryOwner(login: "RoyNyaga"){
+              repositories(first: 10){
+                totalCount
+                edges{
+                  node{
+                    name
+                    url
+                    hasIssuesEnabled
+                    createdAt
+                  }
+                }
+              } 
+            }  
+          }
+        `
+      }
+    }
   ],
 }
