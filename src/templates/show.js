@@ -8,7 +8,6 @@ import Moment from 'react-moment';
 
 
 const Show = (props) => {
-	console.log(props.pageContext)
 	const {name, url, issues, createDate} = props.pageContext
 	return(
 		<Layout>
